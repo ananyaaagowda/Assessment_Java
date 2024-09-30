@@ -1,0 +1,46 @@
+B. Behavioural Design Patterns
+
+
+1. Chain of Responsibility Pattern
+Concept: Passes a request along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+
+Steps:
+
+i. Create a Handler interface or abstract class.
+ii. Implement concrete handlers.
+iii. Pass the request through the chain until it’s handled.
+
+Code example is: chain_of_responsibility.java
+Use Case used in code example: Useful in scenarios like request validation, logging, and workflow processes.
+
+
+
+
+
+2. Memento Pattern
+Concept: Captures and restores an object’s internal state without violating encapsulation.
+
+Steps:
+
+i. Create Memento class to store the state.
+ii. Use Originator class to create and restore states from mementos.
+iii. Caretaker manages the mementos.
+
+Code example is: MementoPattern.java
+Use Case used in code exampe: Useful in scenarios like undo/redo functionality, or saving game states.
+
+
+
+
+
+3. Observer Pattern
+Concept: Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+Steps:
+
+i. Create Observer and Subject interfaces.
+ii. Implement concrete observers and subjects.
+iii. When the subject state changes, notify all observers.
+
+Code example is: ObserverPattern.java
+Use Case used in code example: Common in event handling systems, like GUI frameworks or notification services.

@@ -1,0 +1,40 @@
+A. Structural Design Patterns
+
+
+1. Adapter Pattern
+Use case: The Adapter pattern is used when you want to allow incompatible interfaces to work together. 
+          For example, you might have a legacy system and a new system that don’t work well together, but you want
+          to integrate them without modifying their code.
+Code example present in AdapterPattern.java which explains the above use case
+
+Explanation of code:
+i. MediaPlayer is the target interface, and AudioPlayer implements it.
+ii. AdvancedMediaPlayer is the adaptee that handles specific media types (e.g., VLC, MP4).
+iii. MediaAdapter acts as a bridge between MediaPlayer and AdvancedMediaPlayer.
+
+
+
+
+2. Facade Pattern
+Use case: The Facade pattern provides a simplified interface to a complex system. It hides the 
+          complexities of the system and provides an easy-to-use interface for the client.
+Code example present in FacadePattern.java which explains the above use case
+
+Explanation of the code:
+i. The ComputerFacade class simplifies the interaction with the CPU, Memory, and HardDrive classes.
+ii. The client only needs to call startComputer() instead of dealing with each component individually.
+
+
+
+
+
+
+3. Proxy Pattern
+Use case: The Proxy pattern is used to control access to an object by acting as a placeholder. 
+          It can be useful for lazy initialization, access control, logging, and so on.
+Code example present in ProxyPattern.java which explains the above use case
+
+Explanation of the code:
+
+i. ProxyImage acts as a placeholder for the real image (RealImage). The real image is loaded from disk only when it's first accessed.
+ii. If the image is displayed again, the proxy doesn’t reload it; it uses the existing object.

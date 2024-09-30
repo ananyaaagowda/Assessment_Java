@@ -1,0 +1,42 @@
+A. Creational Design Patterns
+
+
+1. Singleton Pattern
+Concept: Ensures that a class has only one instance and provides a global point of access to it.
+
+Steps:
+
+i. Make the constructor private to prevent direct instantiation.
+ii. Use a static method to get the single instance.
+iii. Ensure thread safety (optional).
+
+Code example present in Singleton_code.java
+Use Case for code example used: Useful for logging, database connection, or configuration classes where a single instance is required.
+
+
+
+
+2. Factory Pattern
+Concept: Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+
+Steps:
+
+i. Define a factory method in a superclass.
+ii. Subclasses override the factory method to create objects.
+
+Code example present in FactoryPattern.java
+Use Case for code example used: Suitable for object creation where the exact class of the object may not be known until runtime.
+
+
+
+
+3. Builder Pattern
+Concept: Separates the construction of a complex object from its representation so that the same construction process can create different representations.
+
+Steps:
+
+i. Define a Builder class with methods to set different properties.
+ii. Provide a build() method to return the final object.
+
+Code example present in BuilderPattern.java
+Use Case: When an object requires numerous optional parameters during construction (e.g., building a house, car configuration).

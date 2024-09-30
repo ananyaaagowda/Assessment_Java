@@ -1,0 +1,57 @@
+Problem Breakdown: Mars Rover Programming Exercise
+
+
+Problem Summary:
+
+Create a simulation for a Mars Rover that can navigate a grid-based terrain.
+Implement the following commands:
+    'M': Move one step forward.
+    'L': Turn left.
+    'R': Turn right.
+
+Implement obstacle detection to prevent the rover from moving into obstacles.
+Ensure you use design patterns, OOP principles, and avoid conditional constructs like if-else.
+
+
+Key Concepts:
+
+
+Command Pattern:
+    Encapsulate each command ('M', 'L', 'R') as objects.
+
+Composite Pattern:
+    Represent the grid and obstacles.
+
+OOP Principles:
+    Use Encapsulation, Inheritance, and Polymorphism.
+
+SOLID Design Principles:
+    Keep code maintainable, extensible, and modular.
+
+Step-by-Step Approach:
+1. Class Structure:
+    Rover: This class will represent the rover, containing position, direction, and the ability to move.
+    Grid: Represents the grid with obstacles and boundaries.
+    Commands: Each command (Move, Left, Right) will be implemented as separate classes using the Command Pattern.
+    Obstacle: Represents an obstacle in the grid.
+
+2. Command Pattern Implementation:
+    Each command will implement a Command interface, and the Rover will execute these commands.
+
+
+Explaination of the code used:
+
+1. Rover Class:
+
+    i. Handles movement (move()), turning (turnLeft(), turnRight()), and position tracking (x, y).
+    ii. Encapsulates logic for moving the rover based on its direction.
+
+2. Command Pattern:MoveCommand, TurnLeftCommand, and TurnRightCommand are concrete implementations of the Command interface. These encapsulate the commands that control the rover.
+
+3. Direction Enum:Encapsulates direction logic. left() and right() methods return the new direction based on the current facing.
+
+4. Grid Class:Represents the terrain grid. Contains methods to check if the rover is within bounds or if there's an obstacle at a specific point.
+
+5. Point Class:Used to store and compare obstacle positions within the grid.
+
+6. Main Class:Simulates the execution of commands in sequence. It checks for obstacles or out-of-bounds conditions before executing a move.
